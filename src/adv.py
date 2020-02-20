@@ -36,7 +36,7 @@ room['treasure'].s_to = room['narrow']
 #
 
 # Make a new player object that is currently in the 'outside' room.
-player = Player(input("What is your name? "), room['outside'])
+player = Player(input("What is your name adventurer? "), room['outside'])
 
 
 # Write a loop that:
@@ -51,10 +51,9 @@ player = Player(input("What is your name? "), room['outside'])
 # If the user enters "q", quit the game.
 
 while True:
-    entry = input("Move to other rooms (n,s,w,e)")
+    entry = input("Move to other rooms (n,s,w,e):")
     if entry in ["n", "s", "w", "e"]:
         player.move(entry)
-        print(player.__str__)
     elif entry == "q":
         print("Come back soon")
         exit()

@@ -11,4 +11,5 @@ class Player:
         return f'Player: {self.name}, Location: {self.location}'
 
     def move(self, entry):
-        self.location = entry
+        self.location = getattr(self.location, f'{entry}_to')
+        print(self.__str__())
