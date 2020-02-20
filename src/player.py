@@ -11,7 +11,5 @@ class Player:
         return f'Player: {self.name}, Location: {self.location}'
 
     def move(self, entry):
-        new_location = getattr(self.location, f'{entry}_to')
-        self.location = new_location if new_location is not None else print(
-            'Empty room')
+        self.location = entry
         print(self.__str__())
