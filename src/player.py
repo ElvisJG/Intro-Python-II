@@ -18,4 +18,4 @@ class Player:
 
     def inventory(self):
         for items in inventory:
-            print(items)
+            return print(items)

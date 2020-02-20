@@ -3,7 +3,7 @@
 
 
 class Room:
-    def __init__(self, name, description, item):
+    def __init__(self, name, description, item=''):
         self.name = name
         self.description = description
         self.item = item
@@ -13,4 +13,4 @@ class Room:
         self.w_to = None
 
     def __str__(self):
-        return f'{self.name}: {self.description}'
+        return f'{self.name}: {self.description}. {self.item} Found!'
