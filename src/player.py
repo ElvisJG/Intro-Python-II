@@ -12,4 +12,3 @@ class Player:
 
     def move(self, entry):
         self.location = entry
-        return f'{self.name} has entered {self.location}'

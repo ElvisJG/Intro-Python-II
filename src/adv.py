@@ -54,6 +54,7 @@ while True:
     entry = input("Move to other rooms (n,s,w,e)")
     if entry in ["n", "s", "w", "e"]:
         player.move(entry)
+        print(player.__str__)
     elif entry == "q":
         print("Come back soon")
         exit()
