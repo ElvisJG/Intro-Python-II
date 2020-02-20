@@ -51,11 +51,14 @@ player = Player(input("What is your name adventurer? "), room['outside'])
 # If the user enters "q", quit the game.
 
 while True:
-    entry = input("Move to other rooms (n,s,w,e):")
+    entry = input(
+        "Move to other rooms or check your inventory (n,s,w,e,i):")
     if entry in ["n", "s", "w", "e"]:
         new_location = getattr(player.location, f'{entry}_to')
         player.move(new_location) if new_location is not None else print(
             "Empty Room")
+    elif entry == 'i':
+        player.inventory()
     elif entry == "q":
         print("Come back soon")
         exit()
