@@ -53,7 +53,9 @@ player = Player(input("What is your name adventurer? "), room['outside'])
 while True:
     entry = input("Move to other rooms (n,s,w,e):")
     if entry in ["n", "s", "w", "e"]:
-        player.move(entry)
+        new_location = getattr(player.location, f'{entry}_to')
+        player.move(new_location) if new_location is not None else print(
+            "Empty Room")
     elif entry == "q":
         print("Come back soon")
         exit()
