@@ -22,9 +22,6 @@ chamber! Sadly, it has already been completely emptied by
 earlier adventurers. The only exit is to the south."""),
 }
 
-
-# Link rooms together
-
 room['outside'].n_to = room['foyer']
 room['foyer'].s_to = room['outside']
 room['foyer'].n_to = room['overlook']
@@ -39,6 +36,7 @@ room['treasure'].s_to = room['narrow']
 #
 
 # Make a new player object that is currently in the 'outside' room.
+player = Player(input("What is your name? "), room['outside'])
 
 # Write a loop that:
 #
@@ -50,3 +48,13 @@ room['treasure'].s_to = room['narrow']
 # Print an error message if the movement isn't allowed.
 #
 # If the user enters "q", quit the game.
+
+while True:
+    entry = input("Move to other rooms (n,s,w,e)")
+    if entry in ["n", "s", "w", "e"]:
+        print("move into x room")
+    elif entry == "q":
+        print("Come back soon")
+        exit()
+    else:
+        print("Please enter a valid command, ie. n, s, w, e or q to quit")
