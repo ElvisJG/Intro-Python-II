@@ -9,3 +9,7 @@ class Player:
 
     def __str__(self):
         return f'Player: {self.name}, Location: {self.location}'
+
+    def move(self, entry):
+        self.location = entry
+        return f'{self.name} has entered {self.location}'
