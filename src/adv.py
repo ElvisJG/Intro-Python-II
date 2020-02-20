@@ -59,7 +59,7 @@ while True:
         player.move(new_location, loot) if new_location is not None else print(
             "Empty Room")
     elif entry == 'i':
-        player.inventory()
+        player.loot()
     elif entry == "q":
         print("Come back soon")
         exit()

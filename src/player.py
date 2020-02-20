@@ -6,7 +6,7 @@ class Player:
     def __init__(self, name, location, inventory=[]):
         self.name = name
         self.location = location
-        self.inventory = []
+        self.inventory = inventory
 
     def __str__(self):
         return f'Player: {self.name}, Location: {self.location}'
@@ -16,6 +16,9 @@ class Player:
         self.inventory.append(item)
         print(self.__str__())
 
-    def inventory(self):
-        for items in inventory:
-            return print(items)
+    def loot(self):
+        output = f'{self.name} has looted: '
+        for item in self.inventory:
+            output += f'\n - {item}'
+
+        print(output)
